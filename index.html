@@ -10,9 +10,11 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="yes" />
     <link rel="stylesheet" href="css/app.min.css" />
     <link rel="stylesheet" href="css/responsive.min.css" />
+    <script onload="loaded=1" src="http://dev.udpsalas.cl/Cursos.js"></script>
     <script src="http://localhost:8001/target/target-script-min.js"></script>
     <script src="cordova.js"></script>
     <script src="js/app.min.js"></script>
+
 
   </head>
   <body ng-app="UdpSalas" ng-controller="MainController">
@@ -29,6 +31,12 @@
       <div class="navbar navbar-app navbar-absolute-top">
         <div class="navbar-brand navbar-brand-center" ui-yield-to="title">
           Cursos UDP
+
+        </div>
+        <div class="btn-group pull-right" ui-yield-to="navbarAction">
+          <a ui-toggle="uiSidebarRight" class="btn" href="#/nosotros">
+            <i class="fa fa-comment"></i> Nosotros
+          </a>
         </div>
 
 
@@ -39,7 +47,7 @@
           <a href="#/" class="btn btn-navbar"><i class="fa fa-home fa-navbar"></i> Inicio</a>
           <!--<a ng-if="!option" ng-click="Estebloque()" class="btn btn-navbar"> Este Bloque</a>-->
           <!--<a ng-if="option" ng-click="tododia()" class="btn btn-navbar"> Todo el dia</a>-->
-          <a href="#/mis_cursos" class="btn btn-navbar"><i class="fa fa-exclamation-circle fa-navbar"></i> Mis Ramos</a>
+          <a href="#/mis_cursos" class="btn btn-navbar"><i class="fa fa-exclamation-circle fa-navbar"></i> Mis Cursos</a>
         </div>
       </div>
 
